@@ -7,7 +7,7 @@
      // var temp="";
       function auth() {
         var config = {
-          'client_id': '885687011150-c7najdt6qo1s4dhish6ddrsddok68vu3.apps.googleusercontent.com885687011150-v6cf5nsrk5vb2ou8aim0muko4korpm0h.apps.googleusercontent.com',
+          'client_id': '885687011150-c7najdt6qo1s4dhish6ddrsddok68vu3.apps.googleusercontent.com',
           'scope': 'https://www.google.com/m8/feeds'
         };
         gapi.auth.authorize(config, function() {
@@ -20,9 +20,10 @@
           dataType: 'json',
           data: token
         }).done(function(data) {
-           var  temp=JSON.stringify(data);
-            console.log(temp);
-            document.getElementById("dd1").innerHTML=JSON.stringify(temp);
+           console.log(data);
+           //var  temp=JSON.stringify(data);
+            //console.log(temp);
+            document.getElementById("dd1").innerHTML=data;
            
           });
       }
